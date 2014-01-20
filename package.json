@@ -1,0 +1,10 @@
+{
+  "name": "NEMock",
+  "version": "0.5.1",
+  "description": "Simple endpoint mocking with NEDB",
+  "dependencies": {
+	"express": "3.4.8",
+	"connect-multiparty": "1.0.2",
+	"nedb": "0.9.3"
+  }
+}

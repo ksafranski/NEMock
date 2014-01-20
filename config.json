@@ -1,0 +1,13 @@
+{
+    "port": 9090,
+    "api_root": "/api/",
+    "dbs": [
+        "users",
+        "todos"
+    ],
+    "db_root": "./db/",
+    "http_root": "./public/",
+    "cors_domains": [
+        "*"
+    ]
+}
