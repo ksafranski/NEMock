@@ -55,7 +55,11 @@ app.get(config.api_root + ":datastore/*", function (req, res) {
 
 app.post(config.api_root + ":datastore/*", multiparty, function (req, res) {
 	http_res = res;
-	db[req.params.datastore].insert(req.body, respond);
+	if (req.params[0]) {
+		db[req.params.datastore].update({ _id: req.params[0] }, req.body, respond);
+	} else {
+		db[req.params.datastore].insert(req.body, respond);
+	}
 });
 
 app.put(config.api_root + ":datastore/*", multiparty, function (req, res) {
